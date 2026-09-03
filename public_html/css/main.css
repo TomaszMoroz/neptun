@@ -1064,6 +1064,72 @@ body {
   padding: 2rem;
 }
 
+.seasonModal {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 103;
+}
+.seasonModal.isHidden {
+  display: none;
+}
+.seasonModal .seasonModal__popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40rem;
+  color: #000;
+  background-color: #e3e3e3;
+  border-radius: 1rem;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .seasonModal .seasonModal__popup {
+    width: 30rem;
+  }
+}
+.seasonModal .seasonModal__popup .exit-icon {
+  position: absolute;
+  top: -3%;
+  right: -1%;
+  font-size: 4rem;
+  color: #007aff;
+  cursor: pointer;
+  z-index: 104;
+  transition: 0.2s ease-in;
+}
+.seasonModal .seasonModal__popup .exit-icon:hover {
+  color: #2d2d2d;
+}
+.seasonModal .seasonModal__popup .popup__title {
+  font-size: 2.2rem;
+  padding: 3rem 2rem 2rem 2rem;
+  border-bottom: 0.1rem solid #666666;
+}
+.seasonModal .seasonModal__popup .popup__text {
+  font-size: 1.6rem;
+  padding: 2rem;
+}
+.seasonModal .seasonModal__popup .popup__btn {
+  display: inline-block;
+  margin: 0 0 2.5rem 0;
+  padding: 1rem 2.5rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #007aff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+.seasonModal .seasonModal__popup .popup__btn:hover {
+  background-color: #2b5379;
+}
+
 .theory-content {
   background-color: #e3e3e3;
   color: #2d2d2d;
