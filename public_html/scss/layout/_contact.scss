@@ -1,0 +1,89 @@
+.contact {
+  background: $color-mixedGray;
+  scroll-margin-top: $nav-offset-top;
+  overflow-x: clip;
+  .container {
+    display: flex;
+    min-height: 40rem;
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact__details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      flex-shrink: 1;
+      width: 50%;
+      padding-right: 2rem;
+      @include tablet {
+        align-items: flex-start;
+        width: auto;
+        margin-top: 2rem;
+        padding-right: 0;
+      }
+
+      .details__item {
+        margin-bottom: 3rem;
+
+        &:last-of-type {
+          margin-bottom: 0;
+          @include tablet {
+            margin-bottom: 3rem;
+          }
+        }
+
+        .item__icon {
+          font-size: 3rem;
+          margin-right: 1rem;
+          @include tablet {
+            font-size: 2.5rem;
+          }
+        }
+
+        .item__data {
+          min-width: 40rem;
+          font-size: 2rem;
+          line-height: 2.5rem;
+          letter-spacing: 0.1rem;
+          color: $color-white;
+          text-decoration: none;
+          transition: .2s ease-in-out;
+          @include tablet {
+            min-width: auto;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+          }
+
+          &:hover {
+            color: darkgray;
+          }
+
+          &:first-of-type {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    .contact__map {
+      margin-top: 2rem;
+      margin-right: 2rem;
+      @include tablet {
+        width: 100%;
+        margin-top: 0;
+        margin-right: 0;
+      }
+
+      iframe {
+        width: 55rem;
+        height: 45rem;
+        @include tablet {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

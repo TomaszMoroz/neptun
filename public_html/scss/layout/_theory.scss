@@ -1,0 +1,104 @@
+.theory {
+  height: auto;
+  background-color: $color-darkGray;
+  color: $color-white;
+  scroll-margin-top: $nav-offset-top;
+  padding: 8rem 0;
+  @include tablet {
+    height: 60rem;
+  }
+  @include mobile {
+    height: 55rem;
+  }
+
+  .swiper {
+    width: 100%;
+    padding-bottom: 5rem;
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 32rem;
+      height: 40rem;
+      @media (max-width: 400px) {
+        width: 28rem;
+        height: 36rem;
+      }
+
+      .theory__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 32rem;
+        height: 100%;
+        background: $color-white;
+        color: $color-black;
+        @media (max-width: 400px) {
+          width: 28rem;
+        }
+
+        .item__title {
+          font-size: 4rem;
+          text-align: center;
+          @media (max-width: 400px) {
+            font-size: 3rem;
+          }
+        }
+
+        .item__img {
+          width: 9rem;
+          height: 9rem;
+          color: black;
+          @media (max-width: 400px) {
+            width: 8rem;
+            height: 8rem;
+          }
+        }
+
+        .item__anchor {
+          @include buttonStyle;
+          @media (max-width: 400px) {
+            font-size: 1.4rem;
+            height: 4.5rem;
+            padding: 0 2rem;
+          }
+        }
+      }
+    }
+
+    .swiper-button-prev {
+      left: 10%;
+      top: 35%;
+      right: auto;
+      transition: .2s ease-in-out;
+      color: $color-black;
+      opacity: 0.6;
+      padding: 3rem;
+      background: $color-swiperBtnBg;
+      border-radius: 50%;
+
+      &:hover {
+        color: $color-arrowHover;
+        opacity: 0.9;
+      }
+    }
+
+    .swiper-button-next {
+      right: 10%;
+      top: 35%;
+      left: auto;
+      transition: .2s ease-in-out;
+      color: $color-black;
+      opacity: 0.6;
+      padding: 3rem;
+      background: $color-swiperBtnBg;
+      border-radius: 50%;
+
+      &:hover {
+        color: $color-arrowHover;
+        opacity: 0.9;
+      }
+    }
+  }
+}

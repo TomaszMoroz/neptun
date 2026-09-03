@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Neptun</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <nav class="header-box">
+            <a href="#homePageID" class="header__logo">
+                <p>Klub Sztuk Walki</p>
+                <img src="assets/neptunLOGO.png" alt="logo">
+            </a>
+            <ul class="header__menu">
+                <li>
+                    <a href="#newsID" class="menu__item">NEWSY</a>
+                </li>
+                <li>
+                    <a href="#aboutUsID" class="menu__item">O NAS</a>
+                </li>
+                <li>
+                    <a href="#trainersID" class="menu__item">TRENERZY</a>
+                </li>
+                <li>
+                    <a href="#theoryID" class="menu__item">TEORIA</a>
+                </li>
+                <li>
+                    <a href="#scheduleID" class="menu__item">GRAFIK</a>
+                </li>
+                <li>
+                    <a href="#contactID" class="menu__item">KONTAKT</a>
+                </li>
+            </ul>
+            <span class="material-icons hamburger">menu</span>
+        </nav>
+    </div>
+</header>
+
+<section class="homePage" id="homePageID">
+    <video src="assets/neptunMovie1920.mp4" class="homePage__video" poster="assets/videoBgPoster.jpg" autoplay muted
+           loop></video>
+    <div class="homepage__textBox">
+        <h1 class="textBox__title">sztuka walki / sport / samoobrona</h1>
+        <a href="./assets/Karta%20członkowska%20Neptun%20Gdańsk%20RODO.pdf" target="_blank" class="textBox__btn">POBIERZ KARTĘ
+            CZŁONKOWSKĄ</a>
+    </div>
+    <div class="homePage__cards">
+        <img src="assets/k-fitpro-jpeg.jpeg" alt="fit profit" width="150px">
+        <img src="assets/k-pzu-png.png" alt="fit profit" width="150px" height="58px" style="background-color: white;">
+    </div>
+</section>
+
+<section class="news" id="newsID">
+    <h2 class="news__title">OSTATNIE NEWSY</h2>
+    <section class="news__section">
+<!------------------  NEWS FROM FIREBASE  -------------------------------------------------->
+    </section>
+    <div class="news__modal isHidden">
+        <article class="modal__article">
+            <div class="article__info">
+                <div class="info__date"></div>
+                <i class="fa-solid fa-circle-xmark exit-icon"></i>
+            </div>
+            <h3 class="article__title"></h3>
+            <p class="article__author"></p>
+            <p class="article__text"></p>
+        </article>
+    </div>
+</section>
+
+<section class="aboutUs" id="aboutUsID">
+    <div class="container">
+        <div class="aboutUs-1__box" data-aos="fade-left">
+            <p class="box__text">Historia Neptuna Gdańsk sięga 2010 roku kiedy grupa pasjonatów sztuk walki postanowiła stworzyć miejsce gdzie mogliby ćwiczyć Taekwondo i inne style zgodnie ze swoimi wzorcami. Szybko z jednej grupy ćwiczących wyłania się osobna gdzie ćwiczą wyłącznie dzieci. z biegiem lat w Klubie pojawiają się czarne pasy oraz coraz więcej istotnych osiągnięć najpierw na arenie wojewódzkiej a następnie ogólnokrajowej. Obecnie zajęcia prowadzone są przez licencjonowanych instruktorów Polskiego Związku Taekwondo. Treningi Taekwondo ITF są rozbudowywane o boks i elementy KAPAPu.	</p>
+        </div>
+        <div class="aboutUs-2__box" data-aos="fade-right" data-aos-delay="800">
+            <h4 class="box__title">DZIĘKI TRENINGOM W "NEPTUN" GDAŃSK MASZ ZAPEWNIONE:</h4>
+            <br>
+            <ul class="box__list">
+                <li>Wyjazdy na turniej i zawody ogólnopolskie i międzynarodowe</li>
+                <li>Egzaminy na stopnie uczniowskie</li>
+                <li>Seminaria szkoleniowe z trenerami z całego świata</li>
+                <li>Zgrupowania i obozy sportowe</li>
+                <li>Uczestnicy po za treningiem technik Taekwondo mają zapewniony trening bokserski oraz elementy obronne bazujące na izraelskim systemie KAPAP</li>
+                <li>Polepszenia swojej kondycji, sprawności fizycznej i samopoczucia</li>
+                <li>Dużo radości i zadowolenia z przyjemnie spędzonego wolnego czasu</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="trainers" id="trainersID">
+    <div class="container">
+        <div class="trainers__trainer" data-aos="fade-right" data-aos-delay="200">
+            <img class="trainer__photo" src="assets/4kuba.png" alt="kuba">
+            <div class="trainer__overlay trainer__overlay--blur">
+                <h2 class="trainer__title">Jakub Tryzno</h2>
+                <p class="trainer__description">VI dan - trener II klasy Taekwondo ITF oraz instruktor KAPAP. Trenuje
+                    nieprzerwanie<br>od końca lat 90-tych zdobywając przez ten czas doświadczenie zawodnicze oraz
+                    instruktorskie. Trenował również inne sporty i systemy walk. Ostatecznie w roku 2010 zakłada KSW
+                    NEPTUN Gdańsk.<br>Jest medalistą turniejów międzynarodowych oraz ogólnopolskich różnej rangi, w tym m.in. Mistrzostw Polski.<br>Prowadzi zajęcia w grupie dziecięcej, starszej i zaawansowanej.</p>
+            </div>
+        </div>
+        <div class="trainers__trainer" data-aos="fade-left" data-aos-delay="300">
+            <img class="trainer__photo" src="assets/1andrzej.png" alt="andrzej">
+            <div class="trainer__overlay trainer__overlay--blur">
+                <h2 class="trainer__title">Andrzej Dzwoniarski</h2>
+                <p class="trainer__description">III dan - trener II klasy Taekwondo ITF. Trenuje z przerwami od 1991 r.
+                    Uprawnienia instruktorskie zdobył w 2006 r. Prowadzi zajęcia w grupie dziecięcej, starszej i
+                    zaawansowanej.</p>
+            </div>
+        </div>
+        <div class="trainers__trainer" data-aos="fade-right" data-aos-delay="400">
+            <img class="trainer__photo" src="assets/3karol.png" alt="karol">
+            <div class="trainer__overlay trainer__overlay--blur">
+                <h2 class="trainer__title">Karol Czemko</h2>
+                <p class="trainer__description">I dan – instruktor Taekwondo ITF oraz sędzia sportowy. Aktywnie trenuje
+                    od
+                    roku
+                    2005.Instruktor grupy dziecięcej.</p>
+            </div>
+        </div>
+        <div class="trainers__trainer" data-aos="fade-left" data-aos-delay="500">
+            <img class="trainer__photo" src="assets/2blazej.png" alt="blazej">
+            <div class="trainer__overlay trainer__overlay--blur">
+                <h2 class="trainer__title">Błażej Czaja</h2>
+                <p class="trainer__description">I dan - instruktor Taekwondo ITF. Trenuje od 1996 r. Dzieli się swoim
+                    wieloletnim doświadczeniem wspomagając trenerów w trakcie prowadzonych zajęć.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="theory" id="theoryID">
+    <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="0">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="theory__item">
+                    <h2 class="item__title">HISTORIA</h2>
+                    <img class="item__img" src="./assets/book-morph-outline.apng" alt="book">
+                    <a href="./theoryPages/history.html" class="item__anchor">Przeczytaj więcej</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="theory__item">
+                    <h2 class="item__title">SEKRETY TRENINGU</h2>
+                    <img class="item__img" src="./assets/pagoda-outline.apng" alt="pagoda">
+                    <a href="./theoryPages/secrets.html" class="item__anchor">Przeczytaj więcej</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="theory__item">
+                    <h2 class="item__title">TECHNIKI</h2>
+                    <img class="item__img" src="./assets/taekwondo-kick.png" alt="kick">
+                    <a href="./theoryPages/techniques.html" class="item__anchor">Przeczytaj więcej</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="theory__item">
+                    <h2 class="item__title">WALKA</h2>
+                    <img class="item__img" src="./assets/martial-arts-couple-fight.png" alt="mma">
+                    <a href="./theoryPages/fight.html" class="item__anchor">Przeczytaj więcej</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="theory__item">
+                    <h2 class="item__title">SAMOOBRONA</h2>
+                    <img class="item__img" src="./assets/wrestling.png" alt="wrestling">
+                    <a href="./theoryPages/selfDefense.html" class="item__anchor">Przeczytaj więcej</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="theory__item">
+                    <h2 class="item__title">UKŁADY</h2>
+                    <img class="item__img" src="./assets/kimono-outline.apng" alt="kimono">
+                    <a href="./theoryPages/arrangements.html" class="item__anchor">Przeczytaj więcej</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
+<section class="schedule" id="scheduleID">
+    <div class="schedule__content">
+        <h3 class="content__title" data-aos="fade-up">GRAFIK ZAJĘĆ</h3>
+        <section class="content__table">
+            <div class="table__column">
+                <h3 class="column__day" data-aos="fade-up" data-aos-delay="100">Poniedziałek</h3>
+                <div class="column__square" data-aos="fade-up" data-aos-delay="100" data-aos-offset="-40">
+                        <h3 class="square__group">Grupa młodzieżowa i starsza</h3>
+                        <p class="square__time">19:00 - 20:30</p>
+                </div>
+            </div>
+            <div class="table__column">
+                <h3 class="column__day" data-aos="fade-up" data-aos-delay="200">Środa</h3>
+                    <div class="column__square" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="square__group">Grupa dziecięca</h3>
+                        <p class="square__time">18:00 - 19:00</p>
+                    </div>
+                    <div class="column__square" data-aos="fade-up" data-aos-delay="200" data-aos-offset="-40">
+                        <h3 class="square__group">Grupa młodzieżowa i starsza</h3>
+                        <p class="square__time">19:00 - 20:30</p>
+                    </div>
+            </div>
+            <div class="table__column">
+                <h3 class="column__day" data-aos="fade-up" data-aos-delay="300">Piątek</h3>
+                    <div class="column__square" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="square__group">Grupa dziecięca</h3>
+                        <p class="square__time">18:00 - 19:00</p>
+                    </div>
+                    <div class="column__square" data-aos="fade-up" data-aos-delay="300" data-aos-offset="-40">
+                        <h3 class="square__group">Grupa młodzieżowa i starsza</h3>
+                        <p class="square__time">19:00 - 20:30</p>
+                    </div>
+            </div>
+        </section>
+        <a href="#contactID" class="content__address" data-aos="fade-up" data-aos-offset="-50">Sala przy ul. Na Zaspę 31A</a>
+    </div>
+</section>
+
+<section class="contact" id="contactID">
+    <div class="container">
+        <div class="contact__details">
+            <div class="details__item" data-aos="fade-right" data-aos-offset="-100">
+                <a href="https://www.google.com/maps/place/Klub+Sztuk+Walki+%22NEPTUN%22+Gda%C5%84sk/@54.4022402,18.654445,17z/data=!3m1!4b1!4m5!3m4!1s0x46fd0ca9f15b81c9:0x473740b2b7743cf2!8m2!3d54.4022402!4d18.6566283?hl=pl-PL"
+                   target="_blank" class="item__data">
+                    <i class="fa-solid fa-location-dot item__icon"></i>
+                    <p>Zespół Szkół Ogólnokształcących <br>
+                        nr 5 (IV LO) <br>
+                        ul. Na Zaspę 31A <br>
+                        80-001 Gdańsk - Nowy Port
+                    </p>
+                </a>
+            </div>
+            <div class="details__item" data-aos="fade-right" data-aos-delay="100" data-aos-offset="-100">
+                <a href="tel:502-915-092" class="item__data">
+                    <i class="fa-solid fa-mobile-screen item__icon"></i>
+                    502-915-092
+                </a>
+            </div>
+            <div class="details__item" data-aos="fade-right" data-aos-delay="200" data-aos-offset="-100">
+                <a href="mailto:tkd-neptun@wp.pl" class="item__data">
+                    <i class="fa-solid fa-envelope item__icon"></i>
+                    tkd-neptun@wp.pl
+                </a>
+            </div>
+            <div class="details__item" data-aos="fade-right" data-aos-delay="300" data-aos-offset="-100">
+                <a href="https://www.facebook.com/KSWNEPTUNGdansk" target="_blank" class="item__data">
+                    <i class="fa-brands fa-facebook item__icon"></i>
+                    KSW NEPTUN Gdansk
+                </a>
+            </div>
+            <div class="details__item" data-aos="fade-right" data-aos-delay="300" data-aos-offset="-100">
+                <a href="https://www.facebook.com/KSWNEPTUNGdansk" target="_blank" class="item__data">
+                    <i class="fa fa-credit-card item__icon"></i>
+                    02194010763091105900000000
+                </a>
+            </div>
+        </div>
+        <div class="contact__map" data-aos="fade-left">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2322.4380487897356!2d18.65443961587855!3d54.402240180213866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd0ca9f15b81c9%3A0x473740b2b7743cf2!2sKlub%20Sztuk%20Walki%20%22NEPTUN%22%20Gda%C5%84sk!5e0!3m2!1spl!2spl!4v1650620766105!5m2!1spl!2spl"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<div class="importantNews-container">
+<!------------------------TUTAJ WAŻNE NEWSY--------------------------------------------->
+</div>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

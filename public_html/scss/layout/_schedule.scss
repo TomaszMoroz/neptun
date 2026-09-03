@@ -1,0 +1,122 @@
+.schedule {
+  display: flex;
+  justify-content: space-between;
+  color: $color-black;
+  padding: 3rem 2rem 5rem 2rem;
+  scroll-margin-top: $nav-offset-top;
+  background-color: $color-lightGray;
+  //background-image: url("../assets/rasz_L_tyl2021.jpg");
+  //background-size: cover;
+  //background-position: center;
+
+  .schedule__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .content__title {
+      font-size: 6rem;
+      margin-bottom: 4rem;
+      text-align: center;
+      color: $color-white;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 3rem;
+      @include mobile {
+        font-size: 4rem;
+      }
+    }
+
+    .content__address {
+      font-size: 2.3rem;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 3rem;
+      color: $color-white;
+      text-decoration: none;
+      letter-spacing: 0.1rem;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 3rem;
+      @include mobile {
+        font-size: 2rem;
+      }
+
+      &:after {
+        content: '';
+        width: 0;
+        height: 0.2rem;
+        display: block;
+        background: $color-white;
+        transition: .3s ease-in-out;
+      }
+
+      &:hover:after {
+        width: 100%;
+      }
+    }
+
+    .content__table {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+
+      .table__column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+
+        .column__day {
+          font-size: 2.5rem;
+          color: $color-white;
+          text-transform: uppercase;
+          padding: 1rem 2rem;
+          background: rgba(0, 0, 0, 0.5);
+          border-radius: 3rem;
+          @include mobile {
+            font-size: 2rem;
+          }
+        }
+
+        .column__square {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 28rem;
+          height: 15rem;
+          text-align: center;
+          color: $color-white;
+          background: $color-mediumGray;
+          @include mobile {
+            width: 23rem;
+            height: 12rem;
+          }
+
+          &:nth-child(odd) {
+            background: $color-mixedGray;
+          }
+
+          .square__time,
+          .square__group {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            @include mobile {
+              font-size: 1.6rem;
+            }
+          }
+        }
+        &:first-of-type {
+          justify-content: space-between;
+          .column__square {
+            background-color: $color-mixedGray;
+          }
+        }
+      }
+    }
+  }
+}

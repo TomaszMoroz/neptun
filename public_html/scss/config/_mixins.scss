@@ -1,0 +1,36 @@
+@use 'sass:math';
+
+@mixin tablet {
+  @media screen and (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+@mixin buttonStyle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  padding: 0 3rem;
+  background-color: $color-secondary;
+  color: $color-white;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  transition: .2s ease-in-out;
+  border-radius: 10rem;
+  text-align: center;
+  &:hover {
+    filter: grayscale(1);
+  }
+  @include mobile {
+    font-size: 1.6rem;
+  }
+}

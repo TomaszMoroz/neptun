@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Neptun Formularz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+
+<section class="form">
+    <div class="container-lg">
+        <div class="text-center">
+            <h1>Formularz do newsa - Neptun</h1>
+            <hr>
+        </div>
+
+        <div class="row justify-content-center my-4">
+
+            <div class="col-lg-6">
+                <form class="needs-validation" novalidate>
+                    <div class="col-12">
+                        <label for="icon" class="form-label">Wybierz ikonkę</label>
+                        <select id="icon" class="form-select" required>
+                            <option value="triangle">Informacja (kółko)</option>
+                            <option value="circle">Wykrzyknik (trójkąt)</option>
+                        </select>
+                        <div class="fs-3 text-end">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <i class="fa-solid fa-triangle-exclamation"></i><br>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <label for="title" class="form-label">Tytuł newsa</label>
+                        <input type="text" id="title" class="form-control" placeholder="Wpisz tytuł" required>
+                        <div class="valid-feedback">
+                            W porządku!
+                        </div>
+                        <div class="invalid-feedback">
+                            Proszę uzupełnij tytuł newsa.
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <label for="name" class="form-label">Autor newsa</label>
+                        <input type="text" id="name" class="form-control" placeholder="Wpisz imię/pseudonim" required>
+                        <div class="valid-feedback">
+                            W porządku!
+                        </div>
+                        <div class="invalid-feedback">
+                            Proszę uzupełnij autora newsa.
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <label for="newsInfo" class="form-label">Treść newsa</label>
+                        <textarea id="newsInfo" class="form-control" style="height: 250px" placeholder="Wpisz treść newsa" required></textarea>
+                        <div class="valid-feedback">
+                            W porządku!
+                        </div>
+                        <div class="invalid-feedback">
+                            Proszę uzupełnij treść newsa.
+                        </div>
+                    </div>
+
+                    <div class="popoverBox border border-danger border-3 p-3">
+                        <label for="popoverNews">Czy news ma wyświetlać się jako okienko po wejściu na stronę?</label>
+                        <select id="popoverNews" class="form-select" required>
+                            <option value="no">Nie</option>
+                            <option value="yes">Tak</option>
+                        </select>
+
+                        <div class="optionalTime" style="display: none">
+                            <label for="popoverNewsTime">Do kiedy ma się wyświetlać?</label>
+                            <input type="date" id="popoverNewsTime" class="form-control">
+                            <div class="invalid-feedback">
+                                Wybierz datę do kiedy wyświetlać newsa.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Czy wszystkie dane są poprawne?
+                            </label>
+                            <div class="valid-feedback">
+                                W porządku!
+                            </div>
+                            <div class="invalid-feedback">
+                                Musisz zaznaczyć, aby wysłać formularz.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 mt-4 text-center">
+                        <button type="submit" class="btn btn-primary">Potwierdź wysłanie Newsa</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-lg">
+        <hr>
+        <div class="text-center">
+            <h1>Newsy - Neptun</h1>
+            <hr>
+        </div>
+        <div class="row news-box">
+            <div class="col-6 my-2">
+                <div class="border border-secondary p-3">
+                    <h5>Tytuł newsa: </h5>
+                    <p>Nr newsa: </p>
+                    <button class="btn btn-primary">Usuń news z bazy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+<script type="module" src="../firebase.js"></script>
+<script type="module" src="./formJS.js"></script>
+</body>
+</html>

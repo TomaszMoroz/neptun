@@ -1,0 +1,53 @@
+.homePage {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: $color-black;
+
+  .homePage__video {
+    opacity: 0.5;
+    filter: brightness(50%) grayscale(20%);
+    margin: 0 auto;
+    @media (min-aspect-ratio: 16/9) {
+      width: 100%;
+      height: auto;
+      min-height: 100vh;
+    }
+    @media (max-aspect-ratio: 16/9) {
+      width: auto;
+      height: 100%;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .homepage__textBox {
+    position: absolute;
+    top: 33%;
+    left: 10%;
+    max-width: 50%;
+
+    .textBox__title {
+      font-size: 5.6rem;
+      margin-bottom: 4rem;
+      letter-spacing: 0.2rem;
+      @include mobile {
+        font-size: 3rem;
+      }
+    }
+
+    .textBox__desc {
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+      letter-spacing: 0.1rem;
+    }
+
+    .textBox__btn {
+      @include buttonStyle;
+      @include mobile {
+        width: 19rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

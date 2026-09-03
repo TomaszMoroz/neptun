@@ -1,0 +1,103 @@
+.aboutUs {
+  height: 85vh;
+  background-image: url("../assets/IMG_6186compressed.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  scroll-margin-top: $nav-offset-top;
+  overflow-x: clip;
+  @include mobile {
+    height: 90vh;
+  }
+  @media (max-width: 500px) {
+    height: 120vh;
+  }
+
+  .container {
+    height: 100%;
+    position: relative;
+
+    .aboutUs-1__box,
+    .aboutUs-2__box {
+      position: absolute;
+      top: 0;
+      width: 30%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background-color: $color-secondary;
+      padding: 3rem;
+      margin: 0 2rem;
+
+      &[data-aos^=fade][data-aos^=fade].aos-animate {
+        opacity: 0.8;
+      }
+    }
+
+    .aboutUs-1__box {
+      left: 0;
+
+      @include tablet {
+        width: 40%;
+      }
+      @include mobile {
+        top: 5%;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 1.5rem;
+      }
+
+      .box__text {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        @include tablet {
+          font-size: 1.4rem;
+          line-height: 2rem;
+        }
+      }
+    }
+
+    .aboutUs-2__box {
+      left: 32%;
+      flex-direction: column;
+      justify-content: center;
+
+      @include tablet {
+        left: 42%;
+        width: 45%;
+      }
+      @include mobile {
+        top: auto;
+        left: 0;
+        bottom: 5%;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 1.5rem;
+      }
+
+      .box__title {
+        font-size: 1.6rem;
+        font-weight: normal;
+        line-height: 2.4rem;
+        text-align: center;
+        @include tablet {
+          font-size: 1.4rem;
+          line-height: 2rem;
+        }
+      }
+
+      .box__list {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        padding-left: 0.5rem;
+        list-style: inside;
+        @include tablet {
+          font-size: 1.4rem;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+}
